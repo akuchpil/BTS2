@@ -1,0 +1,12 @@
+<div class="notif">
+  <div class="notification">
+    <div class="notif-left">
+      <div class="icon"> &#10060; </div>
+      <div class="img"></div>
+    </div>
+    <div class="notif-right">
+      <h2>Titre</h2>
+      <p>contenu</p>
+    </div>
+  </div>
+</div>

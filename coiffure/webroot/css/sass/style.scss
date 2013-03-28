@@ -1,0 +1,116 @@
+@import "compass";
+
+@font-face{
+	font-familly:"entypo";
+	src:url('font/entypo.eot');
+	src:url('font/entypo.eot?#iefix'),
+		url('font/entypo.woff') format('woff'),
+		url('font/entypo.ttf') format('truetype'),
+		url('font/entypo.svg#EntypoRegular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+$color : #F00;
+
+
+.notif{
+	top: 0px;
+	right: 20px;
+	width: 400px;
+	height:60px;
+	position: fixed;
+	@include border-radius(6px);
+	background-color: #FFF;
+	z-index: 2000;
+	font: normal 12px HelveticaNeue, Helvetica, Arial, sans-serif;
+	color:#000000;
+	overflow: hidden;
+	@include background-image(linear-gradient(top,#FFF,#D8D8D8));
+	@include box-shadow(0px 4px 30px rgba(0, 0, 0, 0.5));
+	.notification{
+		cursor:pointer;
+		border-bottom:1px solid #C1C1C1;
+		position:relative;
+		@include box-shadow(0px 1px 0px #FFF);
+		@include text-shadow(0px 1px 0px #fff);
+		&:last-child{
+			border-bottom:none;
+			@include box-shadow(0px 0px 0px transparent);
+		}
+		&.out{
+			border-bottom:none;
+		}
+	}
+	h2{ font-size: 14px; font-weight: bold; margin: 0px; padding:10px 0;}
+	p{ margin: 0px; padding: 0px; padding-bottom: 10px;}
+	.notif-left{
+		position: absolute;
+		height: 100%; 
+		width:30px;
+		padding:0 10px;
+		top:0; left:0;
+		border-right: 1px solid rgba(0,0,0,0.2);
+	}
+	.notif-right{
+		margin-left: 70px;
+	}
+	.icon{
+		font-familly: "Entypo";
+		font-size: 25px;
+		line-height: 15px;
+		margin-top: 23px;
+		text-align: center;
+		text-shadow: 0px 1px 0px white;
+	}
+	.success{
+		background-color: #63a153;
+		color:#FFF;
+		@include background-image( linear-gradient(top,#81c270, #63a153) );
+		@include text-shadow(rgba(0,0,0,0.4) 0px 1px 0px);
+	}
+	.error{
+		background-color: #FA565D;
+		color:#FFF;
+		@include background-image( linear-gradient(top,#FA565D, #D1363D) );
+		@include text-shadow(rgba(0,0,0,0.4) 0px 1px 0px);
+	}
+}
+
+#product{
+	@include border-radius(10px);
+	#prod-left{
+		display:inline-block;
+		
+		h4{
+			font-size:14px;
+			color:pink;
+		}
+		img{
+			margin:0;
+		}
+	}
+	#prod-right{
+		a{
+			background:$color;
+			color:white;
+			font-size:13px;
+			padding:10px;
+			border:solid 1px darken($color,20);
+			@include border-radius(5px);
+			@include box-shadow(inset 0px 1px 1px lighten($color,20));
+			@include background-image(linear-gradient(top,$color,darken($color,10)));
+		}
+		a:active{
+			@include box-shadow(inset 0px 1px 1px lighten($color,10));
+			@include background-image(linear-gradient(top,$color,darken($color,20)));
+		}
+	}
+}
+
+.sell-items{
+
+	.title, .Qte, .Price-HT, .Price-TTC, .erase{
+		display:inline-block;
+	}
+}

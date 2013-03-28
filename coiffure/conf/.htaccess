@@ -1,0 +1,4 @@
+﻿AuthName "Page d'administration"
+AuthType Basic
+AuthUserFile "coiffure/conf/.htpasswd"
+Require valid-user
